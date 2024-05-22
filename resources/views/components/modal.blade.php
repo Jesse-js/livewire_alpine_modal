@@ -4,7 +4,9 @@
     x-on:close-modal.window="visible = false" 
     x-on:keydown.escape.window="visible = false" 
     class="fixed z-50 inset-0"
-    style="display: none">
+    style="display: none"
+    x-transition.duration.300ms
+    >
     {{-- Background overlay --}}
     <div @click="visible = false" class="fixed inset-0 bg-gray-300 opacity-40"></div>
 
