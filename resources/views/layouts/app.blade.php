@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
     <!-- Styles -->
+    @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -20,6 +21,7 @@
     <x-modal name="modal1" title="Modal 1">
         <x-slot name="body">
             <span class="p-5">Modal 1</span>
+            <livewire:test />
         </x-slot>
     </x-modal>
 
@@ -43,6 +45,8 @@
 
     <button x-data @click="$dispatch('open-modal', { name: 'modal3'})"
         class="px-3 py-1 bg-emerald-500 text-white rounded">Open modal</button>
+
+    @livewireScripts
 </body>
 
 </html>
