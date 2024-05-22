@@ -17,13 +17,32 @@
 </head>
 
 <body class="p-5">
-    <x-modal name="test" title="Test">
+    <x-modal name="modal1" title="Modal 1">
         <x-slot name="body">
-            <span class="p-5">Test</span>
+            <span class="p-5">Modal 1</span>
         </x-slot>
     </x-modal>
 
-    <button x-data @click="$dispatch('open-modal', { name: 'test'})" class="px-3 py-1 bg-teal-500 text-white rounded">Open modal</button>
+    <x-modal name="modal2" title="Modal 2">
+        <x-slot name="body">
+            <span class="p-5">Modal 2</span>
+        </x-slot>
+    </x-modal>
+
+    <x-modal name="modal3" title="Modal 3">
+        <x-slot name="body">
+            <span class="p-5">Modal 3</span>
+        </x-slot>
+    </x-modal>
+
+    <button x-data @click="$dispatch('open-modal', { name: 'modal1'})"
+        class="px-3 py-1 bg-teal-500 text-white rounded">Open modal</button>
+
+    <button x-data @click="$dispatch('open-modal', { name: 'modal2'})"
+        class="px-3 py-1 bg-orange-500 text-white rounded">Open modal</button>
+
+    <button x-data @click="$dispatch('open-modal', { name: 'modal3'})"
+        class="px-3 py-1 bg-emerald-500 text-white rounded">Open modal</button>
 </body>
 
 </html>
